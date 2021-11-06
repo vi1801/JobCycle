@@ -1,0 +1,61 @@
+<html>
+<head><title>Job Portal Registration Form</title>
+<script type="text/javascript">
+function validate_required(field, alerttxt)
+{
+with(field)
+{
+if (value===null||value==="")
+{alert(alerttxt); return false;}
+else {return true;}
+}
+}
+
+function validate_form(thisform)
+{
+with(thisform)
+{
+if (validate_required(fname, "First name must be filled out!")===false)
+   {fname.foucus(); return false;}
+if (validate_required(lname, "Last name must be filled out!")===false)
+   {lname.foucus(); return false;}
+if (validate_required(password, "Password must be filled out!")===false)
+   {password.foucus(); return false;}
+if (validate_required(rpassword, "Retype Password must be filled out!")===false)
+   {rpassword.foucus(); return false;}
+}
+}
+</script>
+</head>
+<body bgcolor="aqua" align="center" border="3" >
+<h1 align=center>Registration Form</h1>
+<br>
+<font color="gray" size="15px" border="3" ><b><i>Job Portal</b></i></font>
+<FORM METHOD='get' ONSUBMIT="return validate_form(this);" ACTION="http://" align="left" >
+<h2><DIV>First Name:         <INPUT TYPE='text' NAME='fname' VALUE='' required placeholder="Ex: Achyuth " SIZE=30 MAXLENGTH=25></DIV><br/>
+<DIV>Middle Name:     <INPUT TYPE='text' NAME='fname' VALUE=''required placeholder="Ex: Sai  " SIZE=30 MAXLENGTH=25></DIV><br/>
+<DIV>Last Name:          <INPUT TYPE='text' NAME='lname' VALUE='' required placeholder="Ex: P " SIZE=30 MAXLENGTH=25></DIV><br/> 
+<DIV>Dob                         
+<input type="text" name="dob" id="dob" size="30" required placeholder="Ex: 27/10/2021"></DIV><br>
+<DIV>Password:             <INPUT TYPE='password' NAME='password' required SIZE=30 MAXLENGTH=25></DIV><br/> 
+<DIV>Retype Password:<INPUT TYPE='password' NAME='rpassword' required SIZE=30 MAXLENGTH=25></DIV><br/>
+<DIV>Email:                    
+<INPUT TYPE='text' NAME='email' VALUE='' SIZE=30 required placeholder="Ex: achyuthp.20@gmail.com" MAXLENGTH=25></DIV><br/> 
+<DIV>Sex:<INPUT TYPE='radio' NAME='sex' VALUE='M'>Male
+<INPUT TYPE='radio' NAME='sex' VALUE='F'>Female
+</DIV><br/>
+<DIV>Write About You:<TEXTAREA NAME='about' required COLS=30 ROWS=4></TEXTAREA></DIV><br/>
+<DIV>Your Academic Level: <SELECT><OPTION>High School<OPTION>College Degree<OPTION>University Degree</SELECT></DIV><br/>
+
+<DIV>Your Account user type: <SELECT><OPTION>Student/Employeer<OPTION>Recruiter</SELECT></DIV><br/>
+<DIV>Select your Skill:<br/><INPUT TYPE='checkbox' NAME='C' VALUE='M'>C<br/>
+<INPUT TYPE='checkbox' NAME='topic' VALUE='T'>C++<br/>
+<INPUT TYPE='checkbox' NAME='topic' VALUE='T'>JAVA<br/>
+<INPUT TYPE='checkbox' NAME='topic' VALUE='T'>HTML<br/>
+<INPUT TYPE='checkbox' NAME='topic' VALUE='T'>PYTHON<br/>
+<INPUT TYPE='checkbox' NAME='topic' VALUE='T'>PERL<br/>
+<INPUT TYPE='checkbox' NAME='topic' VALUE='P'>ASP.NET<br/><br/>
+<INPUT TYPE='submit' VALUE='Submit'>    <INPUT TYPE='reset' VALUE='Reset'></h2>
+</FORM>
+</body>
+</html>
